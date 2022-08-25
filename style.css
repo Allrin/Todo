@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --content-width: 800px;
+    --gutter: 15px;
+}
+
+.col-3 {
+    width: calc(100% / 12 * 3 - var(--gutter) * 2);
+    margin: 0 var(--gutter);
+}
+
+.col-6 {
+    width: calc(100% / 12 * 6 - var(--gutter) * 2);
+    margin: 0 var(--gutter);
+}
+
+.col-9 {
+    width: calc(100% / 12 * 9 - var(--gutter) * 2);
+    margin: 0 var(--gutter);
+}
+
+button {
+    cursor: pointer;
+}
+
+.todo {
+    background-color: rgb(188, 179, 179);
+    max-width: var(--content-width);
+    padding: 0 25px;
+    padding-top: 15px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+    border: solid 2px black;
+    border-radius: 5px;
+}
+
+.todoTitle {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--gutter) * -1);
+    padding-bottom: 25px;
+}
+
+.btn {
+    background-color: aqua;
+    border: solid 3px black;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 35px;
+    min-width: 35px;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.btn:hover {
+    box-shadow: 3px 3px 3px rgb(1, 96, 96);
+}
+
+.btnActive {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+}
+
+.container {
+    overflow-y: auto;
+    height: 300px;
+}
+
+.nameTodo {
+    border: solid 3px black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.nameTodo::placeholder {
+    opacity: 50%;
+}
+
+.shellTodo {
+    margin-top: 15px;
+    border: solid 3px black;
+    border-radius: 10px;
+    padding: 35px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+}
+
+.todoBtnReady {
+    position: relative;
+}
+
+.todoBtnReady::after {
+    display: none;
+    visibility: visible;
+    content: '\2714';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shellTodo:active {
+    transform: scale(0.98);
+}
+
+.todoText {
+    background-color: white;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.dataText {
+    background-color: white;
+    position: absolute;
+    padding: 5px 30px;
+    border-radius: 5px;
+    right: 4%;
+    bottom: 7%;
+}
+
+.serach{
+    border: solid 3px black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.serach::placeholder {
+    opacity: 50%;
+}
+
+.searchTodo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--gutter) * -1);
+    padding-bottom: 25px;
+}
+
+.rez {
+    margin: auto;
+}
